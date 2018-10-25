@@ -1,0 +1,31 @@
+\documentclass[
+% Simple faz o doble faz:
+ 	oneside,	% menos de 100 paginas
+%	twoside,	% mas de 100 paginas
+]{ib-tesis}
+
+\input{.preambulo/portada}
+\input{.preambulo/paquetes}
+\usepackage{lipsum}
+\begin{document}
+
+\frontmatter
+\maketitle
+\input{.frontmatter/dedicatoria}
+\input{.frontmatter/fe-de-erratas}
+\tableofcontents                
+\listoffigures                  
+\listoftables                   
+\input{.frontmatter/resumen}
+\input{.frontmatter/abstract}
+
+\mainmatter
+\include{introduccion}
+\appendix
+
+\backmatter
+\bibliography{biblioteca}
+\input{.backmatter/publicaciones}
+\input{.backmatter/agradecimientos}
+
+\end{document}
